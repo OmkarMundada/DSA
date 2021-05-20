@@ -70,3 +70,33 @@ for(int i=0;i<n;i++){
   return 0;
 }
 
+// Longest Arithmatic Subarray
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int ans=2;
+    int d=a[1]-a[0];
+    int j=2;
+    int c=2;
+    while(j<n){
+        if(a[j]-a[j-1]== d){
+            c++;
+        }
+        else{
+            d=a[j]-a[j-1];
+            c=2;
+        }
+        ans=max(ans,c);
+        j++;
+    }
+    cout<<ans<<endl;
+	return 0;
+}
