@@ -100,3 +100,46 @@ int main() {
     cout<<ans<<endl;
 	return 0;
 }
+
+//Subarray with given Sum
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin>>a[i];
+    }
+
+
+    int curr_sum=0,S;
+    cin>>S;
+
+    int i=0;
+    int j=i;
+
+    while(j<n)
+    {
+        curr_sum+=a[j];          
+        if(curr_sum==S)         
+            break;
+        else if(curr_sum>=S)    
+        {
+            i++;                
+            curr_sum=0;
+            j=i;
+            continue;
+        }
+        else{
+        j++;
+        }
+    }
+
+    cout<<i+1<<" "<<j+1;
+    
+    return 0;
+}
