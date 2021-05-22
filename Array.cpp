@@ -126,3 +126,39 @@ int main()
    }
    return 0;
 }
+
+//Smallest Positive missing number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    
+    int a[n];   
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    const int N=1e6+2;
+    bool ch[N];
+    for(int i=0;i<N;i++)
+    {
+        ch[i]=false;
+    }
+    for(int i=0;i<n;i++){
+         if(a[i]>=0){
+        ch[a[i]]=true;
+    }
+    }
+    int res= -1;
+    for(int i=1;i<N;i++){
+        if(ch[i]==false){
+            res=i;
+            break;
+        }
+    }
+    cout<<res<<endl;
+   return 0;
+}
