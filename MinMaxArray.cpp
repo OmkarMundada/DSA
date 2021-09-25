@@ -1,4 +1,4 @@
-//Min-Max element in the array
+0 -9 1 3 -4 5
   
 
 #include<iostream>
@@ -23,4 +23,26 @@ minno= min(minno,arr[i]);
 cout<<maxno<<" "<<minno<<endl;
 
 return 0;
+}
+
+// Max till i
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;
+	cin>>n;
+	int arr[n];
+	for(int i=0;i<n;i++){
+	    cin>>arr[i];
+	}
+	
+	int mx=INT_MIN;
+	for(int i=0;i<n;i++){
+	    mx=max(mx, arr[i]);
+	    cout<<mx<<endl;
+	}
+	
+	return 0;
 }
