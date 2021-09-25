@@ -1,6 +1,3 @@
-0 -9 1 3 -4 5
-  
-
 #include<iostream>
 #include<climits>
 using namespace std;
