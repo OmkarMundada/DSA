@@ -1,1 +1,57 @@
+************** CHEFVACATION *********************
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int x,y,z;
+	    cin>>x>>y>>z;
+	    if(x+y<=z){
+	        cout<<"YES"<<endl;
+	    }
+	    else{
+	        cout<<"NO"<<endl;
+	    }
+	}
+	return 0;
+}
+
+
+**************** NEWPIECE ****************************
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int a,b,p,q;
+	    cin>>a>>b>>p>>q;
+	    int color,colour;
+	    colour=(p+q)%2;
+	    color=(a+b)%2;
+	    if((a==p)&&(b==q)){
+	   cout<<"0"<<endl;
+	    }
+	    else if (colour==color){
+	        cout<<"2"<<endl;
+	    }
+	    else{
+	        cout<<1<<endl;
+	    }
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
 
