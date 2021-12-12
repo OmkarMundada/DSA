@@ -171,3 +171,47 @@ int main() {
 	cout<<maxsum<<endl;
 	return 0;
 }
+
+
+//Maximum  Circular Subarray Sum
+
+#include <iostream>
+#include <climits>
+using namespace std;
+
+int kadane(int arr[],int n){
+    int sum=0;
+	int maxsum=INT_MIN;
+	for(int i=0;i<n;i++){
+	    sum+=arr[i];
+	    if(sum<0){
+	        sum=0;
+	    }
+	    maxsum=max(maxsum,sum);
+	}
+	return maxsum;
+}
+
+
+int main() {
+	int n;
+	cin>>n;
+	int arr[n];
+	for(int i=0;i<n;i++){
+	    cin>>arr[i];
+	}
+	int sum1;
+	int sum2;
+	
+	sum2=kadane(arr,n);
+	int tot=0;
+	for(int i=0;i<n;i++){
+	    tot+=arr[i];
+	    arr[i]=-arr[i];
+	}
+	sum1=tot+kadane(arr,n);
+	cout<<max(sum1,sum2);
+	
+	
+	return 0;
+}
