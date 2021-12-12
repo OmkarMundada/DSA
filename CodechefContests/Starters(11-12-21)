@@ -1,0 +1,89 @@
+**********************CHEFCONTEST**********************
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int x,y,p,q;
+	    cin>>x>>y>>p>>q;
+	    int u,v;
+	    u=x+(p*10);
+	    v=y+(q*10);
+	    if(v>u){
+	        cout<<"Chef"<<endl;
+	    }
+	    else if(u==v){
+	        cout<<"Draw"<<endl;
+	    }
+	    else{
+	        cout<<"Chefina"<<endl;
+	    }
+	}
+	return 0;
+}
+
+
+*********************INDIPERM*************************
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    if(n!=2){
+	        cout<<"1"<<" ";
+	        int i=3;
+	        while(i<n+1){
+	            cout<<i<<" ";
+	            i++;
+	        }
+	        cout<<"2"<<endl;
+	    }
+	    else{
+	        cout<<"2 1"<<endl;
+	    }
+	    
+	}
+	return 0;
+}
+
+*********************FILL01****************************
+
+#include <bits/stdc++.h>
+#include<string>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,k;
+	    cin>>n>>k;
+	    string str;
+	    cin>>str;
+	    int c=0;
+	    int res=0;
+	    for(int i=0;i<n;i++){
+	        if(str[i]=='0'){
+	            c++;
+	            if(c>=k){
+	               res++;
+	               c=0;
+	            }
+	           
+	        }
+	         else{
+	                c=0;
+	            }
+	    }
+	    cout<<res<<endl;
+	}
+	return 0;
+}
